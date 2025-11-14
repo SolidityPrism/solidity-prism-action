@@ -1,0 +1,21 @@
+# action.yml
+
+name: 'Solidity Prism Audit Trigger'
+description: 'A composite action that triggers the Solidity Prism backend for analysis. This is meant to be used inside a workflow file.'
+author: 'Solidity Prism'
+
+# Define the branding for the action in the GitHub Marketplace
+branding:
+  icon: 'shield' # Vous pouvez choisir une icône ici: https://feathericons.com/
+  color: 'blue'
+
+# This action is a "composite" action, meaning it just runs a sequence of shell commands.
+runs:
+  using: "composite"
+  steps:
+    - name: Announce Action
+      run: |
+        echo "This action is a trigger."
+        echo "The main logic is in the workflow file that calls this action."
+        echo "Please see https://github.com/SolidityPrism/documentation for setup instructions."
+      shell: bash
